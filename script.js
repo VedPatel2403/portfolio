@@ -32,6 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Liquid Glass Cursor Light Follower
+    const liquidCursor = document.getElementById('liquid-cursor');
+    if (liquidCursor && window.innerWidth > 768) {
+        document.addEventListener('mousemove', (e) => {
+            liquidCursor.style.left = `${e.clientX}px`;
+            liquidCursor.style.top = `${e.clientY}px`;
+        });
+    }
+
     // Mobile Menu Toggle
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
