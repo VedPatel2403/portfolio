@@ -93,7 +93,7 @@ function handleFormSubmit(event) {
             console.error('EmailJS Error:', error);
             if (formStatus) {
                 formStatus.className = 'form-status error';
-                formStatus.textContent = 'Message sending failed. Please email patelvedb2403@gmail.com directly.';
+                formStatus.textContent = 'Message sending failed. Please email vedbusiness2403@gmail.com directly.';
             }
         })
         .finally(() => {
