@@ -91,39 +91,41 @@ ul {
 /* Ambient Liquid Morphing Background Blobs */
 .ambient-light {
     position: fixed;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
-    opacity: 0.55;
-    filter: blur(95px);
+    opacity: 0.75;
+    filter: blur(75px);
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     animation: liquidMorph 18s ease-in-out infinite alternate;
+    transform: translateZ(0);
+    will-change: transform, border-radius;
 }
 
 .light-1 {
-    width: 480px;
-    height: 480px;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.75) 0%, rgba(99, 102, 241, 0.35) 100%);
-    top: -120px;
-    left: -120px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.85) 0%, rgba(99, 102, 241, 0.5) 100%);
+    top: -100px;
+    left: -100px;
     animation-duration: 22s;
 }
 
 .light-2 {
-    width: 550px;
-    height: 550px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.75) 0%, rgba(168, 85, 247, 0.35) 100%);
-    top: 35%;
-    right: -180px;
+    width: 580px;
+    height: 580px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.85) 0%, rgba(168, 85, 247, 0.5) 100%);
+    top: 30%;
+    right: -160px;
     animation-duration: 26s;
     animation-delay: -5s;
 }
 
 .light-3 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.75) 0%, rgba(56, 189, 248, 0.35) 100%);
-    bottom: 0%;
-    left: 10%;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.85) 0%, rgba(56, 189, 248, 0.5) 100%);
+    bottom: -5%;
+    left: 5%;
     animation-duration: 20s;
     animation-delay: -10s;
 }
@@ -131,16 +133,16 @@ ul {
 /* Cursor Liquid Trail Light */
 .liquid-cursor {
     position: fixed;
-    width: 340px;
-    height: 340px;
+    width: 360px;
+    height: 360px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, rgba(168, 85, 247, 0.12) 50%, transparent 80%);
-    filter: blur(35px);
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(168, 85, 247, 0.18) 50%, transparent 80%);
+    filter: blur(30px);
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
     transform: translate(-50%, -50%);
     transition: transform 0.15s ease-out, opacity 0.3s ease;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 @keyframes liquidMorph {
@@ -164,19 +166,22 @@ ul {
 
 /* Refractive Liquid Glassmorphism Card Style */
 .glass-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(15, 23, 42, 0.65) 40%, rgba(56, 189, 248, 0.04) 100%);
-    backdrop-filter: blur(24px) saturate(190%);
-    -webkit-backdrop-filter: blur(24px) saturate(190%);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(15, 23, 42, 0.45) 45%, rgba(56, 189, 248, 0.08) 100%);
+    -webkit-backdrop-filter: blur(20px) saturate(190%);
+    backdrop-filter: blur(20px) saturate(190%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1.5rem;
     padding: 2rem;
     box-shadow: 
-        inset 0 1.5px 1px rgba(255, 255, 255, 0.3),
-        inset 0 -1px 2px rgba(0, 0, 0, 0.4),
-        0 20px 40px -15px rgba(0, 0, 0, 0.65);
+        inset 0 1.5px 2px rgba(255, 255, 255, 0.4),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.5),
+        0 20px 40px -10px rgba(0, 0, 0, 0.7);
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
+    isolation: isolate;
+    transform: translateZ(0);
+    z-index: 2;
 }
 
 .glass-card::before {
@@ -186,10 +191,11 @@ ul {
     left: -150%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.12) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.18) 50%, transparent 100%);
     transform: skewX(-25deg);
     transition: left 0.75s ease;
     pointer-events: none;
+    z-index: 3;
 }
 
 .glass-card:hover::before {
@@ -197,12 +203,12 @@ ul {
 }
 
 .glass-card:hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(30, 41, 59, 0.75) 40%, rgba(168, 85, 247, 0.08) 100%);
-    border-color: rgba(56, 189, 248, 0.45);
-    transform: translateY(-6px) scale(1.01);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(30, 41, 59, 0.6) 45%, rgba(168, 85, 247, 0.15) 100%);
+    border-color: rgba(56, 189, 248, 0.6);
+    transform: translateY(-6px) scale(1.01) translateZ(0);
     box-shadow: 
-        inset 0 2px 2px rgba(255, 255, 255, 0.4),
-        0 25px 50px -12px rgba(56, 189, 248, 0.25);
+        inset 0 2px 3px rgba(255, 255, 255, 0.5),
+        0 25px 50px -10px rgba(56, 189, 248, 0.35);
 }
 
 /* Liquid Glass Buttons */
