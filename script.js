@@ -93,7 +93,7 @@ function handleFormSubmit(event) {
             console.error('EmailJS Error:', error);
             if (formStatus) {
                 formStatus.className = 'form-status error';
-                formStatus.textContent = 'Message sending failed. Please email patelvedb2403@gmail.com directly.';
+                formStatus.textContent = 'Message sending failed. Please email vedbusiness2403@gmail.com directly.';
             }
         })
         .finally(() => {
@@ -103,4 +103,49 @@ function handleFormSubmit(event) {
                 if (formStatus) formStatus.textContent = '';
             }, 8000);
         });
+}
+
+// Smart Study Screenshot Carousel
+const smartStudySlides = [
+    { src: 'img/smartstudy_splash.jpg', name: 'Splash Screen' },
+    { src: 'img/smartstudy_dashboard.jpg', name: 'Dashboard' },
+    { src: 'img/smartstudy_analytics.jpg', name: 'Analytics' },
+    { src: 'img/smartstudy_calendar.jpg', name: 'Calendar' },
+    { src: 'img/smartstudy_notes.jpg', name: 'Notes' },
+    { src: 'img/smartstudy_settings.jpg', name: 'Settings' }
+];
+
+let currentSlideIndex = 0;
+
+function updateSlide() {
+    const slideImg = document.getElementById('smartstudy-slide-img');
+    const indicator = document.getElementById('slide-indicator');
+    const tabPills = document.querySelectorAll('.tab-pill');
+
+    if (slideImg && indicator) {
+        slideImg.style.opacity = '0.4';
+        setTimeout(() => {
+            slideImg.src = smartStudySlides[currentSlideIndex].src;
+            indicator.textContent = `${smartStudySlides[currentSlideIndex].name} (${currentSlideIndex + 1} / ${smartStudySlides.length})`;
+            slideImg.style.opacity = '1';
+        }, 120);
+
+        tabPills.forEach((pill, idx) => {
+            if (idx === currentSlideIndex) {
+                pill.classList.add('active');
+            } else {
+                pill.classList.remove('active');
+            }
+        });
+    }
+}
+
+function changeSlide(direction) {
+    currentSlideIndex = (currentSlideIndex + direction + smartStudySlides.length) % smartStudySlides.length;
+    updateSlide();
+}
+
+function setSlide(index) {
+    currentSlideIndex = index;
+    updateSlide();
 }

@@ -366,17 +366,33 @@
 
                     <div class="glass-card service-card">
                         <div class="service-icon">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <i class="fa-solid fa-code"></i>
                         </div>
-                        <h3>Vibe Coding & Web Development</h3>
+                        <h3>Web Development</h3>
                         <p>
-                            Designing and building modern, clean, and intuitive web applications leveraging rapid vibe coding methodologies and modern AI engineering tools. Delivering responsive web layouts with slick user interactions.
+                            Building modern, fast, and fully responsive web applications using HTML5, CSS3, and JavaScript. I create user-friendly web layouts with clean structure, smooth glassmorphic aesthetics, and seamless user experiences across all devices.
                         </p>
                         <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> AI-Powered Web App Development</li>
-                            <li><i class="fa-solid fa-check"></i> Modern Glassmorphic Interfaces</li>
-                            <li><i class="fa-solid fa-check"></i> HTML5/CSS3/JavaScript Styling</li>
-                            <li><i class="fa-solid fa-check"></i> Fast Iteration & Deployment</li>
+                            <li><i class="fa-solid fa-check"></i> Responsive Web Layouts</li>
+                            <li><i class="fa-solid fa-check"></i> Modern Vanilla JS & CSS Architecture</li>
+                            <li><i class="fa-solid fa-check"></i> Glassmorphic UI Design</li>
+                            <li><i class="fa-solid fa-check"></i> Cross-Browser Compatibility</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3>Vibe Coding & AI Solutions</h3>
+                        <p>
+                            Accelerating software development leveraging modern vibe coding methodologies and AI tools. Fast prototyping, rapid feature iterations, and streamlined deployment for innovative web and digital projects.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> AI-Assisted Rapid Development</li>
+                            <li><i class="fa-solid fa-check"></i> Fast Concept Prototyping</li>
+                            <li><i class="fa-solid fa-check"></i> Modern Web & Tooling Integration</li>
+                            <li><i class="fa-solid fa-check"></i> Rapid Project Iterations</li>
                         </ul>
                     </div>
                 </div>
@@ -395,6 +411,57 @@
                 </div>
 
                 <div class="projects-grid">
+                    <!-- Smart Study Project -->
+                    <div class="glass-card project-card featured-project">
+                        <div class="project-preview slider-preview">
+                            <div class="app-slider">
+                                <div class="slider-viewport">
+                                    <img src="img/smartstudy_splash.jpg" id="smartstudy-slide-img" alt="Smart Study Splash Screen" class="slider-img">
+                                </div>
+                                <div class="slider-controls">
+                                    <button type="button" class="slider-btn prev-btn" onclick="changeSlide(-1)" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+                                    <span class="slide-indicator" id="slide-indicator">Splash Screen (1 / 6)</span>
+                                    <button type="button" class="slider-btn next-btn" onclick="changeSlide(1)" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+                                </div>
+                                <div class="slider-tabs">
+                                    <button type="button" class="tab-pill active" onclick="setSlide(0)">Splash</button>
+                                    <button type="button" class="tab-pill" onclick="setSlide(1)">Dashboard</button>
+                                    <button type="button" class="tab-pill" onclick="setSlide(2)">Analytics</button>
+                                    <button type="button" class="tab-pill" onclick="setSlide(3)">Calendar</button>
+                                    <button type="button" class="tab-pill" onclick="setSlide(4)">Notes</button>
+                                    <button type="button" class="tab-pill" onclick="setSlide(5)">Settings</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="featured-badge"><i class="fa-solid fa-star"></i> Featured App</div>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>Android Studio</span>
+                                <span>XML</span>
+                                <span>Material Design 3</span>
+                                <span>Analytics</span>
+                                <span>Pomodoro</span>
+                            </div>
+                            <h3>Smart Study — Productivity & Exam Tracker</h3>
+                            <p>
+                                A comprehensive Android study management and productivity application designed to help students organize subjects, track daily study hours, monitor syllabus progress, manage upcoming exam deadlines, log subject notes, and maintain deep focus with Pomodoro timer sessions.
+                            </p>
+                            <ul class="project-features-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Dashboard & Tracker:</strong> Real-time syllabus completion progress bar, daily study goal tracking, and Pomodoro focus sessions.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Analytics & Insights:</strong> Visual study habit charts, weekly study hour tracking, and subject performance metrics.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Exam & Deadline Calendar:</strong> Integrated monthly calendar with color-coded exam highlights and task due alerts.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Notes & Resource Hub:</strong> Subject-wise notes repository and quick-access saved learning links.</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Personalized Settings:</strong> Dark mode appearance toggles, push notifications, and customizable study goals.</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="#contact" class="btn btn-sm btn-primary">Request Source / APK</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grocery Shopping App Project -->
                     <div class="glass-card project-card">
                         <div class="project-preview">
                             <div class="app-mockup">
@@ -474,7 +541,7 @@
                             </div>
                             <div>
                                 <h4>Email Me</h4>
-                                <a href="mailto:patelvedb2403@gmail.com">patelvedb2403@gmail.com</a>
+                                <a href="mailto:vedbusiness2403@gmail.com">vedbusiness2403@gmail.com</a>
                             </div>
                         </div>
 
@@ -505,6 +572,16 @@
                             <div>
                                 <h4>GitHub</h4>
                                 <a href="https://github.com/VedPatel2403" target="_blank" rel="noopener">@VedPatel2403</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-card contact-info-card">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/ved-patel-201629400?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">Ved Patel</a>
                             </div>
                         </div>
                     </div>
@@ -551,7 +628,8 @@
             </div>
             <div class="footer-socials">
                 <a href="https://github.com/VedPatel2403" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:patelvedb2403@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ved-patel-201629400?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:vedbusiness2403@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 <a href="tel:+919016487965" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
             </div>
         </div>
